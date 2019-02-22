@@ -1,0 +1,16 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@import "utils/mixins";
+@import "utils/variables";
+
+body {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+#main-text {
+  font-size: 40px;
+  color: red;
+}
+
+@import "modules/admin-bar";
