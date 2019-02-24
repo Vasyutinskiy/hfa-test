@@ -1,0 +1,195 @@
+section.candidate-add_info-bar {
+  background: $base-color;
+  @include flex-box;
+  flex-direction: column;
+  max-width: 400px;
+  margin-right: -375px;
+  transition: 0.5s;
+  @include box-shadow(0, 5px, 41px, -4px, rgba(50,50,50,.4));
+  @include desktop-lg {
+    max-width: 320px;
+    margin-right: -295px;
+  }
+  @include desktop-reg {
+    max-width: 300px;
+    margin-right: -275px;
+  }
+  @include desktop-sm {
+    max-width: 250px;
+    margin-right: -230px;
+  }
+  @include mobile-reg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+  }
+  .swipe-btn_icon {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 45px;
+    left: -9px;
+    background: $base-color;
+    border-radius: 50%;
+    cursor: pointer;
+    @include box-shadow(0, 5px, 41px, -4px, rgba(50,50,50,.4));
+    img {
+      width: 15px;
+      margin: 4px 0 3px 2px;
+    }
+  }
+  .editable-content_cover {
+    @include flex-box;
+    flex-direction: column;
+    align-items: center;
+    .editable-head_text {
+      font-size: $addFontSize;
+      font-weight: $boldestFontWeight;
+      color: $mainGreyFontColor;
+      margin: 25px auto;
+      @include mobile-reg {
+        font-size: 20px;
+      }
+    }
+    .editor-component {
+      width: 100%;
+      .editable-controls {
+        @include flex-box;
+        align-items: center;
+        justify-content: space-evenly;
+        border-bottom: none;
+        padding-bottom: 20px;
+      }
+      .control-item {
+        width: 15px;
+        height: 15px;
+        display: block;
+        background: no-repeat center center;
+        background-size: 15px;
+        cursor: pointer;
+        &:first-child {
+          background: none;
+          width: 30px;
+          height: auto;
+        }
+        &.size-item {
+          select {
+            border: none;
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+        &.underline-item {
+          background-image: url(/src/img/underline-text_icon-grey.svg);
+          &.active {
+            background-image: url(/src/img/underline-text_icon.svg);
+          }
+        }
+        &.bold-item {
+          background-image: url(/src/img/bold-text_icon-grey.svg);
+          &.active {
+            background-image: url(/src/img/bold-text_icon.svg);
+          }
+        }
+        &.italic-item {
+          background-image: url(/src/img/italic-text_icon-grey.svg);
+          &.active {
+            background-image: url(/src/img/italic-text_icon.svg);
+          }
+        }
+        &.center-item {
+          background-image: url(/src/img/center-text_icon-grey.svg);
+          &.active {
+            background-image: url(/src/img/center-text_icon.svg);
+          }
+        }
+        &.left-item {
+          background-image: url(/src/img/left-text_icon-grey.svg);
+          &.active {
+            background-image: url(/src/img/left-text_icon.svg);
+          }
+        }
+        &.right-item {
+          background-image: url(/src/img/right-text_icon-grey.svg);
+          &.active {
+            background-image: url(/src/img/right-text_icon.svg);
+          }
+        }
+      }
+    }
+    .text-area_cover {
+      @include flex-box;
+      justify-content: center;
+      .add-candidate_content {
+        resize: none;
+        width: 370px;
+        height: 400px;
+        padding: 35px 25px;
+        border: none;
+        letter-spacing: 0.6px;
+        &::placeholder {
+          font-size: $smallFontSize;
+          color: $addFontColor;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+  .update-btn_cover {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    flex-flow: column;
+    padding-bottom: 30px;
+    .update-content_btn {
+      width: 100%;
+      max-width: 200px;
+      height: 45px;
+      text-transform: uppercase;
+      color: $base-color;
+      font-weight: $addFontWeight;
+      background: $accent-color;
+      font-size: $smallFontSize;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      outline: none;
+      transition: 0.2s;
+      line-height: 0.2;
+      @include mobile-reg {
+        max-width: 180px;
+        font-size: 14px;
+      }
+      &:hover {
+        background: $mainGreyFontColor;
+        color: $addFontColor;
+        transition: 0.2s;
+      }
+    }
+  }
+  &.toggled-bar {
+    margin-right: 0;
+    transition: 0.5s;
+    @include mobile-reg {
+      right: 0;
+    }
+    .swipe-btn_icon {
+      img {
+        transform: rotate(180deg);
+        margin-left: 4px;
+      }
+    }
+    .editable-content_cover {
+      .editor-component {
+        .editable-controls {
+          border-bottom: 1px solid $mainFontColor;
+        }
+      }
+    }
+  }
+}

@@ -1,16 +1,57 @@
-@import "../../node_modules/normalize.css/normalize.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900');
 @import "utils/mixins";
 @import "utils/variables";
+@import "./node_modules/styleselect/scss/styleselect.scss";
 
-body {
+html, body {
   width: 100%;
   height: auto;
-  overflow: hidden;
 }
 
-#main-text {
-  font-size: 40px;
-  color: red;
+body {
+  font-family: $mainFont;
+  font-family: $mainFontSize;
+  font-weight: $mainFontWeight;
+  font-size: $mainFontSize;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
 }
+
+*, *:before, *:after { box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+main, section {
+  position: relative;
+}
+
+//common page styles
+.user-panel_cover {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}
+
 
 @import "modules/admin-bar";
+@import "modules/candidate-info";
+@import "modules/candidate-add_info";

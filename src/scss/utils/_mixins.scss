@@ -1,11 +1,49 @@
-@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
-  @if $inset {
-    -webkit-box-shadow:inset $top $left $blur $color;
-    -moz-box-shadow:inset $top $left $blur $color;
-    box-shadow:inset $top $left $blur $color;
-  } @else {
-    -webkit-box-shadow: $top $left $blur $color;
-    -moz-box-shadow: $top $left $blur $color;
-    box-shadow: $top $left $blur $color;
+//Box-shadow mixin
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+  -webkit-box-shadow:$top $left $blur $color #{$inset};
+  -moz-box-shadow:$top $left $blur $color #{$inset};
+  box-shadow:$top $left $blur $color #{$inset};
+}
+
+//flex-box base mixin
+@mixin flex-box {
+  display: flex;
+  width: 100%;
+}
+
+//Media breakpoints mixins
+@mixin desktop-lg {
+  @media (max-width: $desktopLgWidth) {
+    @content;
+  }
+}
+
+@mixin desktop-reg {
+  @media (max-width: $desktopRegWidth) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: $DesktopSmWidth) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tableWidth) {
+    @content;
+  }
+}
+
+@mixin mobile-reg {
+  @media (max-width: $phoneRegWidth) {
+    @content;
+  }
+}
+
+@mixin mobile-sm {
+  @media (max-width: $phoneSmWidth) {
+    @content;
   }
 }
