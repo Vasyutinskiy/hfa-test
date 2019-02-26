@@ -46,7 +46,7 @@ section.candidate-info_cover {
         position: absolute;
         left: -17px;
         top: 3px;
-        background: url(/src/img/chevron-icon_grey.svg) no-repeat center center;
+        background: url(../img/chevron-icon_grey.svg) no-repeat center center;
         width: 15px;
         height: 15px;
         background-size: cover;
@@ -301,6 +301,9 @@ section.candidate-info_cover {
             width: 49%;
             margin-left: 0;
             margin-right: 0;
+            @include mobile-reg {
+              width: 100%;
+            }
           }
         }
       }
@@ -348,11 +351,6 @@ section.candidate-info_cover {
             .key-work_skills-item {
               display: block;
               transition: 0.2s;
-            }
-            .show-more_link {
-              &:after {
-                transform: rotate(180deg);
-              }
             }
           }
           .skills-item_represent-cover {
@@ -408,6 +406,12 @@ section.candidate-info_cover {
                   font-size: 14px;
                   text-align: right;
                 }
+                @include mobile-reg {
+                  max-width: 80px;
+                }
+                @include mobile-sm {
+                  min-width: 80px;
+                }
               }
             }
           }
@@ -432,11 +436,15 @@ section.candidate-info_cover {
             border-right: 5px solid transparent;
             border-top: 5px solid $mainGreyFontColor;
             clear: both;
+            transform: rotate(180deg);
             @include desktop-lg {
               right: 38%;
             }
             @include desktop-sm {
               right: 34%;
+            }
+            @include tablet {
+              right: 40%;
             }
             @include mobile-reg {
               right: 30%;
@@ -444,6 +452,11 @@ section.candidate-info_cover {
             @include mobile-sm {
               right: 25%;
             }
+          }
+        }
+        .show-less_link {
+          &:after {
+            transform: rotate(0);
           }
         }
       }
@@ -476,7 +489,7 @@ section.candidate-info_cover {
             }
           }
         }
-        &.active-item {
+        &.skills-active_item {
           border: 3px solid $mainGreyFontColor;
           @include desktop-sm {
             padding: 10px;

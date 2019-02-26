@@ -82,39 +82,39 @@ section.candidate-add_info-bar {
           }
         }
         &.underline-item {
-          background-image: url(/src/img/underline-text_icon-grey.svg);
-          &.active {
-            background-image: url(/src/img/underline-text_icon.svg);
+          background-image: url(../img/underline-text_icon-grey.svg);
+          &.active-edit_icon {
+            background-image: url(../img/underline-text_icon.svg);
           }
         }
         &.bold-item {
-          background-image: url(/src/img/bold-text_icon-grey.svg);
-          &.active {
-            background-image: url(/src/img/bold-text_icon.svg);
+          background-image: url(../img/bold-text_icon-grey.svg);
+          &.active-edit_icon {
+            background-image: url(../img/bold-text_icon.svg);
           }
         }
         &.italic-item {
-          background-image: url(/src/img/italic-text_icon-grey.svg);
-          &.active {
-            background-image: url(/src/img/italic-text_icon.svg);
+          background-image: url(../img/italic-text_icon-grey.svg);
+          &.active-edit_icon {
+            background-image: url(../img/italic-text_icon.svg);
           }
         }
         &.center-item {
-          background-image: url(/src/img/center-text_icon-grey.svg);
-          &.active {
-            background-image: url(/src/img/center-text_icon.svg);
+          background-image: url(../img/center-text_icon-grey.svg);
+          &.active-edit_icon {
+            background-image: url(../img/center-text_icon.svg);
           }
         }
         &.left-item {
-          background-image: url(/src/img/left-text_icon-grey.svg);
-          &.active {
-            background-image: url(/src/img/left-text_icon.svg);
+          background-image: url(../img/left-text_icon-grey.svg);
+          &.active-edit_icon {
+            background-image: url(../img/left-text_icon.svg);
           }
         }
         &.right-item {
-          background-image: url(/src/img/right-text_icon-grey.svg);
-          &.active {
-            background-image: url(/src/img/right-text_icon.svg);
+          background-image: url(../img/right-text_icon-grey.svg);
+          &.active-edit_icon {
+            background-image: url(../img/right-text_icon.svg);
           }
         }
       }
@@ -129,6 +129,7 @@ section.candidate-add_info-bar {
         padding: 35px 25px;
         border: none;
         letter-spacing: 0.6px;
+        font-size: 16px;
         &::placeholder {
           font-size: $smallFontSize;
           color: $addFontColor;

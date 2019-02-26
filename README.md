@@ -1,34 +1,52 @@
-# HFA-candidate-profile
+# HFA-test-task(Frontend developer)
 
-_This project is used for testing purpose_
+## Personal note
+Hello!<br /><br />
+This test-project was made with usage of random images and icons and also with usage of approximate sizes for elements,grid etc because of design prototype can be displayed only in attached PDF file.<br />
 
-Welcome to this awesome project that we wish you will enjoy. It will require you to use all your knowledge and skills to build a prototype interface that will allow us to manage candidates on our platform.
+Compile function implemented via Webpack 4
 
-## Objective(s):
 
-- Based on the provided PDF document you are requested to build a prototype of this interface that will allow us to view and edit a candidate and also with the *Comments* panel to add some more details on a candidate when our recruiters are interviewing them.
-- The prototype will need to be responsive of course.
+### How to run it:
 
-## Details:
+- There is a list of ways how to run it:
 
-- Only the profile tab is visible, the others are disabled (no action is expected on them)
-- The *Experiences* and *Formations* tabs are not editable but are showing only one element by default. When clicking on "show more..." it display the rest of the elements and the user can click on "show less..." to only display the default one.
-- The *Current Professional Status*, *Wished Professional Status* and *Languages* blocks are editable as displayed on the 3rd screen.
-- To allow the recruiter to have all the informations when writing comments, when the panel is displayed, the *Current Professional Status*, *Wished Professional Status* and *Languages* blocks are displayed after the *Experiences* and *Formations* ones.
-- The left menu has a focus on the current domain explored (here "Candidates") when clicking on the others nothing happen.
+  - Open command line in project folder and run:  <br /><br />``` npm install```<br /><br />
+    and after all node modules will be installed you could run it on local server by using command<br /><br />
+    ```npm run dev``` <br />
+    
+    You'll get launched project that will be available on local server by adress <br />
+    <br />```http://localhost:8080/``` <br /><br />
+    !Notice(to make it real you should have nodejs and npm installed on your machine)
+  - You could download project folder from Github repo and just open ```index.html``` file that placed in dist folder and open it in your browser.<br />
+  
+    This will display this project on your local machine in browser.<br />
+  - To use it in real server you'll just need content from dist folder and ```index.html``` file.
 
-## Expectation(s):
 
-### Technical requirements:
+### Main problems feedback:
 
-- Work done using mainly HTML, CSS (or SASS) and ES6 (no jQuery)
+I've used display: flex property for main user container grid and it was a little bit challenging to take into account all changes that appears when additional right sidebar was open.<br /><br />
+For functional part - I've made test Object to simulate input user data that should be used for almost all elements on this page.So it was also challenging to insert all data in all elements that connected with userData and displayed in design prototype mockup.<br /><br />
+And also it was a little bit hard to implement html/css markup according to prototype mockup in PDF file :).<br /><br />
+But it was a pretty interesting test project. <br />
+Thank you for that!
 
-### Results:
+### The amount time passed on it:
 
-- Link to your work repository with a README indicating:
-  - how to run it.
-  - Feedbacks on the main problems met during the realization of the exercice.
-  - The amount time passed on it.
-  - Feedbacks on how to improve the project if we needed to make more appealing to the users.
+- Webpack configuration --- 3h
+- HTML/CSS markup + responsiveness   --- 10h
+- functional part(js/es6) --- 12h
 
-Good Luck
+### Improve Feedback:
+
+For me prototype mockup of your project looks pretty user friendly and consist of usefull data that logically placed in this "user-admin" area.
+Several things that could be added from my side:
+ - I think it could be usefull for user to have an ability to add personal avatar image(but maybe this project already have this ability but it placed in another content tab)
+ - For Experience and Formation tab could be added function that gives user an ability to remove experience item from their data if they want to.
+ - For contact section in the header it could be good idea to give an ability to edit number, mail, linkedIn link(just in case this info needs to be changed).
+ 
+ 
+ I'm looking forward to get your feedback.<br />
+ Thank you in advance!
+
