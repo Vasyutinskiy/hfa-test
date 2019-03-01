@@ -157,6 +157,8 @@ section.candidate-info_cover {
   }
   .candidate-main_panel {
     @include flex-box;
+    height: 100%;
+    overflow-y: auto;
     .candidate-main_tabs {
       @include flex-box;
       flex-direction: column;
@@ -444,7 +446,7 @@ section.candidate-info_cover {
               right: 34%;
             }
             @include tablet {
-              right: 40%;
+              right: 37%;
             }
             @include mobile-reg {
               right: 30%;
@@ -527,6 +529,7 @@ section.candidate-info_cover {
               border-bottom: 1px solid $mainFontColor;
               font-size: $smallFontSize;
               color: $addFontColor;
+              background: transparent;
               @include desktop-lg {
                 width: 60%;
               }
